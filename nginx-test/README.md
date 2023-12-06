@@ -1,7 +1,7 @@
 # nginx-test
 
 ## Description
-nginx test deployment
+sample description
 
 ## Usage
 
