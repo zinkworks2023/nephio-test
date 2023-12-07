@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /nginx-new
+  name: nginx-new
+  annotations:
+    config.kubernetes.io/local-config: "false"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|nginx-new'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/zinkworks2023/nephio-test.git
+    directory: nginx-test
+    ref: main
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/zinkworks2023/nephio-test.git
+    directory: nginx-test
+    ref: main
+    commit: 8f64c07389b6be06157e23d3cd98407904177829
+info:
+  description: sample description
