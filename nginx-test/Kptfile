@@ -3,6 +3,6 @@ kind: Kptfile
 metadata:
   name: nginx-test
   annotations:
-    config.kubernetes.io/local-config: "true"
+    config.kubernetes.io/local-config: "false"
 info:
   description: sample description
