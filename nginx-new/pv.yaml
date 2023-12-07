@@ -6,7 +6,7 @@ spec:
   upstream:
     repo: nginx-new
     package: nginx-new
-    revision: v1
+    revision: v2
   targets:
   - objectSelector:
       apiVersion: infra.nephio.org/v1alpha1
