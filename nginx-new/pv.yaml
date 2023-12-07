@@ -19,4 +19,4 @@ spec:
       annotations:
         approval.nephio.org/policy: initial
       injectors:
-      - nameExpr: regional
+      - nameExpr: target.name
