@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: # kpt-merge: /nginx-deployment
+  name: nginx-deployment
+  labels:
+    app: webserver
+    name: webserver
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'apps|Deployment|default|nginx-deployment'
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: webserver
+      name: webserver
+  template:
+    metadata:
+      labels:
+        app: webserver
+        name: webserver
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
